@@ -28,7 +28,7 @@ public class GastronomyDaoImpl extends AbstractDao<Integer, Gastronomy> implemen
 	}
 
 	@SuppressWarnings("unchecked")
-	public List<Gastronomy> findAllGastronomy() {
+	public List<Gastronomy> findAllGastronomies() {
 		Criteria criteria = createEntityCriteria();
 		return (List<Gastronomy>) criteria.list();
 	}
