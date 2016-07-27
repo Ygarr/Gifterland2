@@ -10,7 +10,7 @@ public interface GastronomyDao {
 
 	void saveGastronomy(Gastronomy gastronomy);
 	
-	void deleteEmployeeBySsn(String ssn);
+	void deleteGastronomyBySsn(String ssn);
 	
 	List<Gastronomy> findAllGastronomies();
 

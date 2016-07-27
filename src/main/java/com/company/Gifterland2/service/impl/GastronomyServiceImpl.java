@@ -20,8 +20,8 @@ public class GastronomyServiceImpl implements GastronomyService {
 		return dao.findById(id);
 	}
 
-	public void saveGatronomy(Gastronomy gastronomy) {
-		dao.saveGatronomy(gastronomy);
+	public void saveGastronomy(Gastronomy gastronomy) {
+		dao.saveGastronomy(gastronomy);
 	}
 
 	/*
@@ -29,7 +29,7 @@ public class GastronomyServiceImpl implements GastronomyService {
 	 * Just fetch the entity from db and update it with proper values within transaction.
 	 * It will be updated in db once transaction ends. 
 	 */
-	public void updateGatronomy(Gastronomy gastronomy) {
+	public void updateGastronomy(Gastronomy gastronomy) {
 		Gastronomy entity = dao.findById(gastronomy.getId());
 		if(entity!=null){
 			entity.setName(gastronomy.getName());
@@ -43,16 +43,16 @@ public class GastronomyServiceImpl implements GastronomyService {
 		dao.deleteGastronomyBySsn(ssn);
 	}
 	
-	public List<Gastronomy> findAllGatronomys() {
+	public List<Gastronomy> findAllGastronomies() {
 		return dao.findAllGastronomies();
 	}
 
-	public Gastronomy findGatronomyBySsn(String ssn) {
+	public Gastronomy findGastronomyBySsn(String ssn) {
 		return dao.findGastronomyBySsn(ssn);
 	}
 
 	public boolean isGastronomySsnUnique(Integer id, String ssn) {
-		Gastronomy gastronomy = findGatronomyBySsn(ssn);
+		Gastronomy gastronomy = findGastronomyBySsn(ssn);
 		return ( gastronomy == null || ((id != null) && (gastronomy.getId() == id)));
 	}
 	

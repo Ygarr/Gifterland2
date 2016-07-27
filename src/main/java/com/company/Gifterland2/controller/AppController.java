@@ -32,7 +32,7 @@ public class AppController {
 	@RequestMapping(value = { "/", "/list" }, method = RequestMethod.GET)
 	public String listGastronomies(ModelMap model) {
 
-		List<Gastronomy> gastronomies = service.findAllEmployees();
+		List<Gastronomy> gastronomies = service.findAllGastronomies();
 		model.addAttribute("gastronomies", gastronomies);
 		return "allgastronomies";
 	}
@@ -74,7 +74,7 @@ public class AppController {
 			return "registration";
 		}
 		
-		service.saveEmployee(gastronomy);
+		service.saveGastronomy(gastronomy);
 
 		model.addAttribute("success", "Gastronomy " + gastronomy.getName() + " registered successfully");
 		return "success";
@@ -122,7 +122,7 @@ public class AppController {
 	 */
 	@RequestMapping(value = { "/delete-{ssn}-employee" }, method = RequestMethod.GET)
 	public String deleteEmployee(@PathVariable String ssn) {
-		service.deleteEmployeeBySsn(ssn);
+		service.deleteGastronomyBySsn(ssn);
 		return "redirect:/list";
 	}
 
