@@ -69,11 +69,11 @@
 		</dependency>
 		<!-- JDBC Connector stop -->
 		<!-- Data Source start -->
-		<dependency>
-			<groupId>com.zaxxer</groupId>
-			<artifactId>HikariCP</artifactId>
-			<version>2.3.7</version>
-		</dependency>
+		<!--<dependency>-->
+			<!--<groupId>com.zaxxer</groupId>-->
+			<!--<artifactId>HikariCP</artifactId>-->
+			<!--<version>2.3.7</version>-->
+		<!--</dependency>-->
 		<!-- Data Source stop -->
 		<dependency>
 			<groupId>org.hibernate</groupId>
