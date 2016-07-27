@@ -1,0 +1,10 @@
+com/company/Gifterland2/model/Employee.class
+com/company/Gifterland2/dao/AbstractDao.class
+com/company/Gifterland2/dao/EmployeeDaoImpl.class
+com/company/Gifterland2/dao/EmployeeDao.class
+com/company/Gifterland2/service/EmployeeService.class
+com/company/Gifterland2/controller/AppController.class
+com/company/Gifterland2/service/EmployeeServiceImpl.class
+com/company/Gifterland2/configuration/AppInitializer.class
+com/company/Gifterland2/configuration/AppConfig.class
+com/company/Gifterland2/configuration/SpringBootJettyAppConfig.class
