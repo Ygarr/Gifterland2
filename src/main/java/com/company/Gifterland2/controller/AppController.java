@@ -82,9 +82,9 @@ public class AppController {
 
 
 	/*
-	 * This method will provide the medium to update an existing employee.
+	 * This method will provide the medium to update an existing gastronomy.
 	 */
-	@RequestMapping(value = { "/edit-{ssn}-employee" }, method = RequestMethod.GET)
+	@RequestMapping(value = { "/edit-{ssn}-gastronomy" }, method = RequestMethod.GET)
 	public String editGastronomy(@PathVariable String ssn, ModelMap model) {
 		Gastronomy gastronomy = service.findGastronomyBySsn(ssn);
 		model.addAttribute("gastronomy", gastronomy);
@@ -118,10 +118,10 @@ public class AppController {
 
 	
 	/*
-	 * This method will delete an employee by it's SSN value.
+	 * This method will delete an gastronomy by it's SSN value.
 	 */
-	@RequestMapping(value = { "/delete-{ssn}-employee" }, method = RequestMethod.GET)
-	public String deleteEmployee(@PathVariable String ssn) {
+	@RequestMapping(value = { "/delete-{ssn}-gastronomy" }, method = RequestMethod.GET)
+	public String deleteGastronomy(@PathVariable String ssn) {
 		service.deleteGastronomyBySsn(ssn);
 		return "redirect:/list";
 	}

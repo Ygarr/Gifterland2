@@ -17,22 +17,22 @@
 
 
 <body>
-	<h2>List of Employees</h2>	
+	<h2>List of Gastronomies</h2>
 	<table>
 		<tr>
 			<td>NAME</td><td>Joining Date</td><td>Salary</td><td>SSN</td><td></td>
 		</tr>
-		<c:forEach items="${employees}" var="employee">
+		<c:forEach items="${gastronomies}" var="gastronomy">
 			<tr>
-			<td>${employee.name}</td>
-			<td>${employee.joiningDate}</td>
-			<td>${employee.salary}</td>
-			<td><a href="<c:url value='/edit-${employee.ssn}-employee' />">${employee.ssn}</a></td>
-			<td><a href="<c:url value='/delete-${employee.ssn}-employee' />">delete</a></td>
+			<td>${gastronomy.name}</td>
+			<td>${gastronomy.joiningDate}</td>
+			<td>${gastronomy.salary}</td>
+			<td><a href="<c:url value='/edit-${gastronomy.ssn}-gastronomy' />">${gastronomy.ssn}</a></td>
+			<td><a href="<c:url value='/delete-${gastronomy.ssn}-gastronomy' />">delete</a></td>
 			</tr>
 		</c:forEach>
 	</table>
 	<br/>
-	<a href="<c:url value='/new' />">Add New Employee</a>
+	<a href="<c:url value='/new' />">Add New gastronomy</a>
 </body>
 </html>

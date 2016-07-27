@@ -10,30 +10,30 @@ import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
-@Repository("employeeDao")
+@Repository("gastronomyDao")
 public class GastronomyDaoImpl extends AbstractDao<Integer, Gastronomy> implements GastronomyDao {
 
 	public Gastronomy findById(int id) {
 		return getByKey(id);
 	}
 
-	public void saveEmployee(Gastronomy gastronomy) {
+	public void saveGastronomy(Gastronomy gastronomy) {
 		persist(gastronomy);
 	}
 
-	public void deleteEmployeeBySsn(String ssn) {
+	public void deleteGastronomyBySsn(String ssn) {
 		Query query = getSession().createSQLQuery("delete from Gastronomy where ssn = :ssn");
 		query.setString("ssn", ssn);
 		query.executeUpdate();
 	}
 
 	@SuppressWarnings("unchecked")
-	public List<Gastronomy> findAllEmployees() {
+	public List<Gastronomy> findAllGastronomy() {
 		Criteria criteria = createEntityCriteria();
 		return (List<Gastronomy>) criteria.list();
 	}
 
-	public Gastronomy findEmployeeBySsn(String ssn) {
+	public Gastronomy findGastronomyBySsn(String ssn) {
 		Criteria criteria = createEntityCriteria();
 		criteria.add(Restrictions.eq("ssn", ssn));
 		return (Gastronomy) criteria.uniqueResult();
