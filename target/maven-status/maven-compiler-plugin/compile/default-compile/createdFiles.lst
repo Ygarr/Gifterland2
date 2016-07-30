@@ -1,10 +1,9 @@
-com/company/Gifterland2/model/Employee.class
 com/company/Gifterland2/configuration/AppAndHibernateConfig.class
+com/company/Gifterland2/dao/GastronomyDao.class
+com/company/Gifterland2/service/GastronomyService.class
 com/company/Gifterland2/Gifterland2AndServletInitSpringBootJettyApp.class
 com/company/Gifterland2/dao/AbstractDao.class
-com/company/Gifterland2/dao/EmployeeDao.class
-com/company/Gifterland2/service/EmployeeService.class
+com/company/Gifterland2/dao/impl/GastronomyDaoImpl.class
 com/company/Gifterland2/controller/AppController.class
-com/company/Gifterland2/service/impl/EmployeeServiceImpl.class
-com/company/Gifterland2/AppInitializer.class
-com/company/Gifterland2/dao/impl/EmployeeDaoImpl.class
+com/company/Gifterland2/service/impl/GastronomyServiceImpl.class
+com/company/Gifterland2/model/Gastronomy.class

@@ -1,13 +1,12 @@
 package com.company.Gifterland2.dao;
 
-import java.io.Serializable;
-
-import java.lang.reflect.ParameterizedType;
-
 import org.hibernate.Criteria;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+
+import java.io.Serializable;
+import java.lang.reflect.ParameterizedType;
 
 public abstract class AbstractDao<PK extends Serializable, T> {
 	
@@ -37,7 +36,7 @@ public abstract class AbstractDao<PK extends Serializable, T> {
 	public void delete(T entity) {
 		getSession().delete(entity);
 	}
-	
+
 	protected Criteria createEntityCriteria(){
 		return getSession().createCriteria(persistentClass);
 	}
